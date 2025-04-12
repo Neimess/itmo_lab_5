@@ -1,0 +1,14 @@
+> uv run src/task_async.py
+2025-04-12 16:35:43 - INFO - task_async.py - task_1/_fetch_image - Файл сохраненен
+2025-04-12 16:35:43 - INFO - task_async.py - task_1/_fetch_image - Файл сохраненен
+2025-04-12 16:35:46 - INFO - task_async.py - task_1/_fetch_image - Файл сохраненен
+2025-04-12 16:35:46 - INFO - task_async.py - task_1/_fetch_image - Файл сохраненен
+2025-04-12 16:35:46 - INFO - task_async.py - task_1/_fetch_image - Файл сохраненен
+2025-04-12 16:35:46 - INFO - task_async.py - task_1/main - Асинхронная загрузка завершена за 4.35 секунд.
+> uv run src/task_sync.py
+2025-04-12 16:35:57 - INFO - task_sync.py - task_1_sync/fetch_image - Файл сохраненен
+2025-04-12 16:36:01 - INFO - task_sync.py - task_1_sync/fetch_image - Файл сохраненен
+2025-04-12 16:36:02 - INFO - task_sync.py - task_1_sync/fetch_image - Файл сохраненен
+2025-04-12 16:36:06 - INFO - task_sync.py - task_1_sync/fetch_image - Файл сохраненен
+2025-04-12 16:36:10 - INFO - task_sync.py - task_1_sync/fetch_image - Файл сохраненен
+2025-04-12 16:36:10 - INFO - task_sync.py - task_1_sync/<module> - Синхронная загрузка завершена за 18.10 секунд.

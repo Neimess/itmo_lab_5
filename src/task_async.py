@@ -58,7 +58,10 @@ class Fetcher:
 
 async def main() -> None:
     fetcher = Fetcher("https://picsum.photos/200", 5, "artifacts/task_1")
+    start = asyncio.get_event_loop().time()
     await fetcher.fetch()
+    duration = asyncio.get_event_loop().time() - start
+    logger.info(f"Асинхронная загрузка завершена за {duration:.2f} секунд.")
 
 
 if __name__ == "__main__":

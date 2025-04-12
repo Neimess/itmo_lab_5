@@ -9,6 +9,7 @@ dependencies = [
     "aiohttp>=3.11.13",
     "asyncio>=3.4.3",
     "bs4>=0.0.2",
+    "requests>=2.32.3",
     "types-aiofiles>=24.1.0.20250326",
 ]
 
