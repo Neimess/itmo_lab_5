@@ -1,7 +1,9 @@
-import os
 import logging
-import requests
+import os
 import time
+
+import requests
+
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s - %(name)s/%(funcName)s - %(message)s"
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 logger = logging.getLogger("task_1_sync")
@@ -10,6 +12,7 @@ logger.setLevel(logging.INFO)
 console_handler = logging.StreamHandler()
 console_handler.setFormatter(logging.Formatter(LOG_FORMAT, datefmt=DATE_FORMAT))
 logger.addHandler(console_handler)
+
 
 class SyncFetcher:
     def __init__(self, url: str, counter: int, save_path: str) -> None:
@@ -35,6 +38,7 @@ class SyncFetcher:
         for idx in range(self.counter):
             self.fetch_image(idx)
 
+
 if __name__ == "__main__":
     fetcher = SyncFetcher("https://picsum.photos/200", 5, "artifacts/task_1_sync")
 
@@ -42,4 +46,4 @@ if __name__ == "__main__":
     fetcher.fetch()
     duration = time.time() - start
 
-    logger.info(f"Синхронная загрузка завершена за {duration:.2f} секунд.")
+    logger.info("Синхронная загрузка завершена за %.2f секунд.", duration)

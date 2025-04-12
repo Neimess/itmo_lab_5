@@ -61,7 +61,7 @@ async def main() -> None:
     start = asyncio.get_event_loop().time()
     await fetcher.fetch()
     duration = asyncio.get_event_loop().time() - start
-    logger.info(f"Асинхронная загрузка завершена за {duration:.2f} секунд.")
+    logger.info("Асинхронная загрузка завершена за %.2f секунд.", duration)
 
 
 if __name__ == "__main__":
